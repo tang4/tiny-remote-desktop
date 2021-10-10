@@ -1,0 +1,20 @@
+version: '3'
+services:
+  novnc:
+    image: tang/xrdp-vnc:latest
+    environment:
+      # Adjust to your screen size
+      - RESOLUTION=1600x968
+    ports:
+      - "8080:6901"
+      - "5901:5901"
+      - "3389:3389"
+    networks:
+      - x11
+    healthcheck:
+        test: (wget -q -T1 --spider "http://127.0.0.1:6901" || exit 1)
+        interval: 5s
+        timeout: 2s
+        retries: 1
+networks:
+  x11:

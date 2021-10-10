@@ -17,8 +17,6 @@
 [begin] (Fluxbox-1.3.7)
 [encoding] {UTF-8}
       [exec] (Xterm) {xterm}
-      [exec] (Chromium) {chromium-browser --no-sandbox}
-      [exec] (Firefox) {firefox}
 [submenu] (Editors)
       [exec]   (vi) {xterm -e vi}
 [end]
