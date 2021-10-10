@@ -1,7 +1,10 @@
 version: '3'
 services:
   novnc:
-    image: tang/xrdp-vnc:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: tang/xrdp-vnc
     environment:
       # Adjust to your screen size
       - RESOLUTION=1600x968

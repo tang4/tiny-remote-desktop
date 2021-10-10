@@ -5,6 +5,7 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/reposit
 RUN apk update && apk add --no-cache xvfb x11vnc fluxbox supervisor xterm bash \
 #    chromium firefox \
     xrdp wqy-zenhei novnc websockify \
+#    pcmanfm \
     && ln -s /usr/share/novnc/vnc_lite.html /usr/share/novnc/index.html \
     && rm -rf /var/cache/apk/*
 
